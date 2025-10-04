@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOMEA RTO 200 TESTI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff0066;
+            text-shadow: 0 0 10px rgba(255, 0, 102, 0.7);
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .profile-video {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #ff0066;
+            box-shadow: 0 0 20px rgba(255, 0, 102, 0.5);
+            margin-bottom: 20px;
+        }
+        
+        .profile-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-name {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .profile-bio {
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+        
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .social-card {
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+        
+        .social-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 0, 102, 0.3);
+            border-color: #ff0066;
+        }
+        
+        .social-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ff0066;
+        }
+        
+        .social-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .social-desc {
+            color: #bbb;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .social-link {
+            display: inline-block;
+            background: #ff0066;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .social-link:hover {
+            background: #cc0052;
+        }
+        
+        .testimonials {
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #ff0066;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .testimonial-card {
+            background: rgba(50, 50, 50, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 4px solid #ff0066;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #ff0066;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #333;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .profile-video {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .social-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video class="bg-video" autoplay muted loop>
+        <source src="https://files.catbox.moe/n07zjn.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+    </video>
+    
+    <div class="container">
+        <header>
+            <div class="logo">KOMEA RTO 200 TESTI</div>
+            <div class="tagline">Sosial Media Terbaik untuk Komunitas KOMEA</div>
+        </header>
+        
+        <section class="profile-section">
+            <div class="profile-video">
+                <video autoplay muted loop>
+                    <source src="https://files.catbox.moe/osa1ih.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung video.
+                </video>
+            </div>
+            <h1 class="profile-name">KOMEA GANTENG</h1>
+            <p class="profile-bio">
+                Selamat datang di halaman resmi KOMEA RTO 200 TESTI. 
+                Bergabunglah dengan komunitas kami dan nikmati berbagai konten menarik 
+                serta layanan terbaik dari KOMEA.
+            </p>
+        </section>
+        
+        <section class="social-links">
+            <div class="social-card">
+                <div class="social-icon">📱</div>
+                <h2 class="social-title">TikTok KOMEA</h2>
+                <p class="social-desc">Ikuti konten menarik dan terbaru dari KOMEA di TikTok</p>
+                <a href="https://www.tiktok.com/@komearto100testi?_t=ZS-90GuwkuHZFY&_r=1" class="social-link" target="_blank">Kunjungi TikTok</a>
+            </div>
+            
+            <div class="social-card">
+                <div class="social-icon">🎮</div>
+                <h2 class="social-title">JB Roblox by KOMEA</h2>
+                <p class="social-desc">Komunitas Roblox terbaik bersama KOMEA #1</p>
+                <a href="https://chat.whatsapp.com/BvxRI4UZePd2Uld808MVLb?mode=ems_copy_t" class="social-link" target="_blank">Gabung WhatsApp</a>
+            </div>
+            
+            <div class="social-card">
+                <div class="social-icon">💬</div>
+                <h2 class="social-title">All Testi/Stok KOMEA</h2>
+                <p class="social-desc">Channel WhatsApp untuk semua testimoni dan stok KOMEA</p>
+                <a href="https://whatsapp.com/channel/0029VbBoEL18aKvN4kgkvG2h" class="social-link" target="_blank">Gabung Channel</a>
+            </div>
+            
+            <div class="social-card">
+                <div class="social-icon">📞</div>
+                <h2 class="social-title">Nomor KOMEA</h2>
+                <p class="social-desc">Hubungi KOMEA langsung melalui WhatsApp</p>
+                <a href="https://wa.me/62895359900809" class="social-link" target="_blank">Hubungi Sekarang</a>
+            </div>
+        </section>
+        
+        <section class="testimonials">
+            <h2 class="section-title">Testimoni KOMEA</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"KOMEA memberikan pelayanan terbaik! Sangat recommended untuk semua penggemar RTO."</p>
+                    <p class="testimonial-author">- Andi RTO Lover</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Stok selalu update dan proses cepat. Puas banget sama KOMEA!"</p>
+                    <p class="testimonial-author">- Budi Gamer</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Komunitasnya sangat ramah dan saling membantu. Gabung di sini worth it banget!"</p>
+                    <p class="testimonial-author">- Sari Community</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Konten TikTok-nya selalu menghibur dan informatif. Jangan lupa follow!"</p>
+                    <p class="testimonial-author">- Rina Followers</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2023 KOMEA RTO 200 TESTI. All rights reserved.</p>
+            <p>Website designed for KOMEA Community</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Script untuk mengontrol video background
+        document.addEventListener('DOMContentLoaded', function() {
+            const bgVideo = document.querySelector('.bg-video');
+            const profileVideo = document.querySelector('.profile-video video');
+            
+            // Pastikan video diputar dengan benar
+            bgVideo.play().catch(e => console.log("Autoplay prevented:", e));
+            profileVideo.play().catch(e => console.log("Autoplay prevented:", e));
+            
+            // Efek parallax sederhana untuk background video
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.5;
+                bgVideo.style.transform = 'translateY(' + rate + 'px)';
+            });
+        });
+    </script>
+</body>
+  </html>
